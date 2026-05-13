@@ -10,12 +10,4 @@ cask "diffy" do
   app "Diffy.app"
 
   zap trash: "~/Library/Application Support/Diffy"
-
-  caveats <<~EOS
-    Diffy is ad-hoc signed and not notarized. After installing or upgrading, run:
-
-      xattr -dr com.apple.quarantine /Applications/Diffy.app
-
-    Then reopen Diffy normally.
-  EOS
 end
