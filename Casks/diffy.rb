@@ -10,4 +10,17 @@ cask "diffy" do
   app "Diffy.app"
 
   zap trash: "~/Library/Application Support/Diffy"
+
+  caveats <<~EOS
+    Diffy is ad-hoc signed and not notarized. macOS will block it on first launch
+    unless you installed with --no-quarantine (recommended):
+
+      brew install --cask --no-quarantine diffy
+
+    If you already installed without that flag and see a Gatekeeper dialog, run:
+
+      xattr -dr com.apple.quarantine /Applications/Diffy.app
+
+    Then reopen Diffy normally.
+  EOS
 end
