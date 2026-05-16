@@ -7,6 +7,8 @@ cask "diffy" do
   desc "Menu bar app that shows live git working-tree diff stats"
   homepage "https://github.com/nick701/diffy"
 
+  depends_on macos: ">= :tahoe"
+
   app "Diffy.app"
 
   zap trash: "~/Library/Application Support/Diffy"
