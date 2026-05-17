@@ -1,6 +1,6 @@
 cask "diffy" do
-  version "0.4.1"
-  sha256 "e02a409845f4d53917c9017ed995b2e077a3e071235f3ebbef8a826e4d5e4caa"
+  version "0.4.2"
+  sha256 "6082b9a2a081209cf3373c6d47d92902d05c8f35b1279f7e073fba2c0ff4323d"
 
   url "https://github.com/nick701/diffy/releases/download/v#{version}/Diffy-#{version}.zip"
   name "Diffy"
@@ -10,6 +10,11 @@ cask "diffy" do
   depends_on macos: ">= :tahoe"
 
   app "Diffy.app"
+
+  caveats <<~EOS
+    Diffy is ad-hoc signed and not notarized. After install or upgrade, clear quarantine with:
+      xattr -dr com.apple.quarantine /Applications/Diffy.app
+  EOS
 
   zap trash: "~/Library/Application Support/Diffy"
 end
