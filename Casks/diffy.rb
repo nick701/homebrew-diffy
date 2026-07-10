@@ -7,14 +7,14 @@ cask "diffy" do
   desc "Menu bar app that shows live git working-tree diff stats"
   homepage "https://github.com/nick701/diffy"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Diffy.app"
+
+  zap trash: "~/Library/Application Support/Diffy"
 
   caveats <<~EOS
     Diffy is ad-hoc signed and not notarized. After install or upgrade, clear quarantine with:
       xattr -dr com.apple.quarantine /Applications/Diffy.app
   EOS
-
-  zap trash: "~/Library/Application Support/Diffy"
 end
