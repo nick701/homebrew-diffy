@@ -1,10 +1,10 @@
 cask "diffy" do
-  version "0.4.6"
-  sha256 "06b23ecd32e4d02c6f0a60b1f3b2f33043bd647405743851a223ad5553e0690a"
+  version "0.5.0"
+  sha256 "ca73a28c22a7dcee05874321c0917d80b42c4d3c40f2ee57c57805367c8b0190"
 
   url "https://github.com/nick701/diffy/releases/download/v#{version}/Diffy-#{version}.zip"
   name "Diffy"
-  desc "Menu bar app that shows live git working-tree diff stats"
+  desc "Menu bar app for local Git diffs and recent commit history"
   homepage "https://github.com/nick701/diffy"
 
   depends_on macos: :tahoe
