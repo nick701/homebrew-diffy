@@ -1,6 +1,6 @@
 cask "diffy" do
-  version "0.6.1"
-  sha256 "851217b6f3f8fafb412d2ef77f29a90fc2a3564ec67c3dcdb255e6d7d0503056"
+  version "0.7.0"
+  sha256 "022a57a5d4a9656f517df62cb8b906242a216b375e305412a7295ce29384ef1e"
 
   url "https://github.com/nick701/diffy/releases/download/v#{version}/Diffy-#{version}.zip"
   name "Diffy"
